@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/screens/hompage.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -35,9 +36,12 @@ class LandingPage extends StatelessWidget {
             ),
             const SizedBox(height: 200),
             SizedBox(
+              height: 60,
               width: 200,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.deepOrange,
